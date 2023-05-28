@@ -1,0 +1,54 @@
+:host {
+  ion-header {
+    ion-toolbar {
+      ion-title {
+        font-family: NetflixSansBold;
+        font-size: x-large;
+      }
+
+      ion-button {
+        .logo {
+          margin-left: 16px;
+          width: 20px;
+        }
+      }
+    }
+  }
+
+  ion-content {
+    ion-list {
+      .downloads {
+        margin-bottom: 4px;
+        ion-item {
+          &::part(native) {
+            padding-inline-start: 12px;
+          }
+
+          img {
+            width: 130px;
+            border-radius: 4px;
+          }
+
+          ion-icon {
+            font-size: 25px;
+          }
+
+          ion-label {
+            font-size: small;
+            font-weight: 600;
+
+            .info {
+              color: var(--ion-color-medium);
+              font-size: smaller;
+            }
+
+            .expire {
+              color: #d0501f;
+              font-size: smaller;
+            }
+          }
+        }
+      }
+    }
+  }
+}

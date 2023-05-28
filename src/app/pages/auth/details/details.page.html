@@ -1,0 +1,106 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-back-button
+        color="light"
+        defaultHref="/tabs/home"
+        text=""
+      ></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button fill="clear" color="light">
+        <ion-icon name="logo-rss"></ion-icon>
+      </ion-button>
+      <ion-button fill="clear">
+        <img class="logo" src="./assets/img/account.png" alt="My Profile" />
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="fixed-block">
+    <video controls="controls" playsinline loop>
+      <source
+        [src]="'./assets/data/detail/detail-preview.mp4' + '#t=0.5'"
+        type="video/mp4"
+      />
+    </video>
+  </div>
+
+  <b> <app-skeleton [data]="details.title"></app-skeleton></b><br />
+  <ion-label color="success">
+    <app-skeleton [data]="details.match + '% match'"></app-skeleton
+  ></ion-label>
+
+  <app-skeleton [data]="details.year"></app-skeleton>
+  <ion-button expand="full" color="light" class="spotlight-btn">
+    <ion-icon name="play" size="small" slot="start"></ion-icon>
+    Play
+  </ion-button>
+
+  <ion-button expand="full" color="gray" class="spotlight-btn">
+    <ion-icon name="download-outline" size="small" slot="start"></ion-icon>
+    Download
+  </ion-button>
+
+  <span> <app-skeleton [data]="details.desc"></app-skeleton></span>
+  <ion-label color="medium"
+    ><app-skeleton
+      [data]="'Cast: '.concat(details.cast.join(', '))"
+    ></app-skeleton
+  ></ion-label>
+
+  <ion-row>
+    <ion-col size="3">
+      <div class="action-btn">
+        <ion-icon name="add"></ion-icon>
+        My List
+      </div>
+    </ion-col>
+    <ion-col size="3">
+      <div class="action-btn">
+        <ion-icon name="thumbs-up-outline"></ion-icon>
+        Rate
+      </div>
+    </ion-col>
+    <ion-col size="3">
+      <div class="action-btn">
+        <ion-icon name="send-outline"></ion-icon>
+        Share
+      </div>
+    </ion-col>
+  </ion-row>
+
+  <ion-list class="ion-margin-top">
+    <ion-row
+      *ngFor="let episode of details.episodes; let i = index; trackBy: trackByIdentity"
+      class="ion-align-items-center"
+    >
+      <ion-col size="4">
+        <img
+          [src]="episode.id ? './assets/data/detail-'+ episode.id + '.png' : ''"
+          alt="Episode Logo"
+        />
+      </ion-col>
+      <ion-col size="6">
+        <b>
+          <app-skeleton
+            [data]="(i+1) + '.'.concat(episode.title)"
+          ></app-skeleton></b
+        ><br />
+        <ion-label color="medium">
+          <app-skeleton [data]="episode.duration"></app-skeleton
+        ></ion-label>
+      </ion-col>
+      <ion-col size="2" class="ion-text-end">
+        <ion-icon name="download-outline" color="light"></ion-icon>
+      </ion-col>
+      <ion-col size="12">
+        <p>
+          <app-skeleton [data]="episode.desc"></app-skeleton>
+        </p>
+      </ion-col>
+    </ion-row>
+  </ion-list>
+</ion-content>

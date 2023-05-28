@@ -1,0 +1,20 @@
+{
+  "categories": [
+    { "id": 1, "category": "Home" },
+    { "id": 2, "category": "My List" },
+    { "id": 3, "category": "Available for Download" },
+    { "id": 4, "category": "Action" },
+    { "id": 5, "category": "Anime" },
+    { "id": 6, "category": "Blockbusters" },
+    { "id": 7, "category": "Children & Family" },
+    { "id": 8, "category": "Comedies" },
+    { "id": 9, "category": "Crime" },
+    { "id": 10, "category": "Critically Acclaimed" },
+    { "id": 11, "category": "Documentaries" },
+    { "id": 12, "category": "Dramas" },
+    { "id": 13, "category": "Fantasy" },
+    { "id": 14, "category": "German" },
+    { "id": 15, "category": "Horror" },
+    { "id": 16, "category": "International" }
+  ]
+}

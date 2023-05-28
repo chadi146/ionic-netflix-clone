@@ -1,0 +1,31 @@
+:root {
+  /* Set the background of the entire app */
+  --ion-background-color: #000;
+
+  /*  Set the default text color */
+  --ion-text-color: #fff;
+
+  /* Set the font family of the entire app */
+  --ion-font-family: NetflixSansRegular;
+}
+
+h1,
+h2,
+h3 {
+  font-size: 32px;
+  font-weight: 500;
+  font-family: NetflixSansBold;
+}
+
+.transparent-modal {
+  --background: #0000005c;
+
+  &::part(content) {
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+  }
+
+  ion-content {
+    --background: transparent;
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "comingSoon": [
+    {
+      "id": 0,
+      "title": "Seinfeld",
+      "desc": "New York comedian Jerry and his friends offer up some hilarious dialogue in this show 'about nothing' that became one of the longest-running sitcoms.",
+      "date": "Coming October 1",
+      "tags": [
+        { "id": 0, "tag": "Sitcom" },
+        { "id": 1, "tag": "Comedy" },
+        { "id": 2, "tag": "Ensemble" },
+        { "id": 3, "tag": "New York City" },
+        { "id": 4, "tag": "Critically Acclaimed" }
+      ],
+      "video": "./assets/data/soon/soon.mp4"
+    },
+    {
+      "id": 1,
+      "title": "Ronaldo",
+      "desc": "A portrait of famed Portugese soccer hero Cristiano Ronaldo charts his career and personal life, offering a glimpse of how he handles stardom.",
+      "date": "Coming October 1",
+      "tags": [
+        { "id": 6, "tag": "Inspiring" },
+        { "id": 7, "tag": "Investigative" },
+        { "id": 8, "tag": "Documentary" },
+        { "id": 9, "tag": "Soccer" },
+        { "id": 10, "tag": "Celebrities" }
+      ],
+      "video": "./assets/data/soon/soon.mp4"
+    },
+    {
+      "id": 2,
+      "title": "The Billion Dollar Code",
+      "desc": "In 1990s Berlin, an artist and a hacker invented a new way to see the world. Years later, they reunite to sue Google for patent infringement on it.",
+      "date": "Season 1 Coming October 7",
+      "tags": [
+        { "id": 11, "tag": "Inspiring" },
+        { "id": 12, "tag": "Investigative" },
+        { "id": 13, "tag": "Documentary" },
+        { "id": 14, "tag": "Soccer" },
+        { "id": 15, "tag": "Celebrities" }
+      ],
+      "video": "./assets/data/soon/soon.mp4"
+    },
+    {
+      "id": 3,
+      "title": "Seinfeld",
+      "desc": "New York comedian Jerry and his friends offer up some hilarious dialogue in this show 'about nothing' that became one of the longest-running sitcoms.",
+      "date": "Coming October 1",
+      "tags": [
+        { "id": 16, "tag": "Sitcom" },
+        { "id": 17, "tag": "Comedy" },
+        { "id": 18, "tag": "Ensemble" },
+        { "id": 19, "tag": "New York City" },
+        { "id": 20, "tag": "Critically Acclaimed" }
+      ],
+      "video": "./assets/data/soon/soon.mp4"
+    },
+    {
+      "id": 4,
+      "title": "Ronaldo",
+      "desc": "A portrait of famed Portugese soccer hero Cristiano Ronaldo charts his career and personal life, offering a glimpse of how he handles stardom.",
+      "date": "Coming October 1",
+      "tags": [
+        { "id": 21, "tag": "Inspiring" },
+        { "id": 22, "tag": "Investigative" },
+        { "id": 23, "tag": "Documentary" },
+        { "id": 24, "tag": "Soccer" },
+        { "id": 25, "tag": "Celebrities" }
+      ],
+      "video": "./assets/data/soon/soon.mp4"
+    },
+    {
+      "id": 5,
+      "title": "The Billion Dollar Code",
+      "desc": "In 1990s Berlin, an artist and a hacker invented a new way to see the world. Years later, they reunite to sue Google for patent infringement on it.",
+      "date": "Season 1 Coming October 7",
+      "tags": [
+        { "id": 26, "tag": "Inspiring" },
+        { "id": 27, "tag": "Investigative" },
+        { "id": 28, "tag": "Documentary" },
+        { "id": 29, "tag": "Soccer" },
+        { "id": 30, "tag": "Celebrities" }
+      ],
+      "video": "./assets/data/soon/soon.mp4"
+    }
+  ]
+}

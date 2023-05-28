@@ -1,0 +1,60 @@
+:host {
+  ion-header {
+    ion-toolbar {
+      ion-title {
+        font-family: NetflixSansBold;
+        font-size: x-large;
+      }
+      ion-button {
+        .logo {
+          margin-left: 16px;
+          width: 20px;
+        }
+      }
+    }
+  }
+
+  ion-content {
+    ion-row {
+      margin-bottom: 20px;
+
+      & .inactive {
+        opacity: 0.3;
+        transition: 0.3s;
+      }
+
+      ion-col {
+        video {
+          width: 100%;
+        }
+
+        .action-btn {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          font-size: small;
+          ion-icon {
+            font-size: 24px;
+          }
+        }
+
+        &.desc {
+          padding-left: 15px;
+          padding-right: 15px;
+          p {
+            color: var(--ion-color-medium);
+          }
+          b {
+            font-size: larger;
+          }
+
+          .tag {
+            margin-right: 5px;
+            margin-bottom: 5px;
+          padding: 8px;
+          }
+        }
+      }
+    }
+  }
+}

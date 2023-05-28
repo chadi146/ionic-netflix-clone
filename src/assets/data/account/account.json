@@ -1,0 +1,19 @@
+{
+  "profiles": [
+    {
+      "id": 1,
+      "name": "Chadi",
+      "img": "./assets/data/account/profile-1.png"
+    },
+    {
+      "id": 2,
+      "name": "Michelle",
+      "img": "./assets/data/account/profile-2.png"
+    },
+    {
+      "id": 3,
+      "name": "Antonio",
+      "img": "./assets/data/account/profile-3.png"
+    }
+  ]
+}

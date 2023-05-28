@@ -1,0 +1,40 @@
+<app-title-header [title]="'Coming Soon'"></app-title-header>>
+
+<ion-content scrollEvents="true" (ionScroll)="contentScrolled($event)">
+  <ion-item lines="none">
+    <ion-icon slot="start" name="notifications-outline"></ion-icon>
+    <ion-label>Notifications</ion-label>
+    <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+  </ion-item>
+
+  <ion-row
+    *ngFor="let block of soon; let i = index;"
+    [class.inactive]="i !== activeBlock"
+  >
+    <ion-col size="12">
+      <video #player preload="auto" playsinline loop>
+        <source [src]="'../../../../assets/data/soon/soon.mp4' + '#t=0.5'" type="video/mp4" />
+      </video>
+    </ion-col>
+    <ion-col size="3" offset="6">
+      <div class="action-btn">
+        <ion-icon name="notifications-outline"></ion-icon>
+        Remind me
+      </div>
+    </ion-col>
+    <ion-col size="3">
+      <div class="action-btn">
+        <ion-icon name="information-circle-outline"></ion-icon>
+        Info
+      </div>
+    </ion-col>
+    <ion-col size="12" class="desc">
+      <p><app-skeleton [data]="block.date"></app-skeleton></p>
+      <b><app-skeleton [data]="block.title"></app-skeleton></b><br />
+      <p><app-skeleton [data]="block.desc"></app-skeleton></p>
+      <ion-badge class="tag" *ngFor="let tag of block.tags; trackBy: trackByIdentity"
+        ><app-skeleton [data]="tag.tag"></app-skeleton
+      ></ion-badge>
+    </ion-col>
+  </ion-row>
+</ion-content>

@@ -1,0 +1,71 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-back-button
+        color="light"
+        defaultHref="/tabs/home"
+        text=""
+      ></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button fill="clear" color="light">
+        <ion-icon name="logo-rss"></ion-icon>
+      </ion-button>
+      <ion-button fill="clear">
+        <img class="logo" src="./assets/img/account.png" alt="My Profile" />
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="fixed-block">
+    <div class="account-select">
+      <div
+        class="account"
+        *ngFor="let acc of accounts; trackBy: trackByIdentity"
+      >
+        <img [src]="acc.img" alt="{{ acc.name}}" />
+        <span><app-skeleton [data]="acc.name"></app-skeleton></span>
+      </div>
+    </div>
+
+    <ion-button expand="full" fill="clear" color="light">
+      <ion-icon name="pencil-outline" size="small" slot="start"></ion-icon>
+      Manage properties
+    </ion-button>
+  </div>
+
+  <ion-list>
+    <ion-item lines="none">
+      <ion-icon name="checkmark" slot="start"></ion-icon>
+      My List
+    </ion-item>
+    <ion-item lines="none">
+      <ion-icon name="settings" slot="start"></ion-icon>
+      App Settings
+    </ion-item>
+    <ion-item lines="none">
+      <ion-icon name="person-outline" slot="start"></ion-icon>
+      Account
+    </ion-item>
+    <ion-item lines="none">
+      <ion-icon name="help-circle" slot="start"></ion-icon>
+      Help
+    </ion-item>
+  </ion-list>
+
+  <ion-button
+    expand="full"
+    fill="clear"
+    color="light"
+    routerLink="/"
+    routerDirection="root"
+  >
+    Sign Out
+  </ion-button>
+
+  <div class="version">
+    Version <app-skeleton [data]="appVersion"></app-skeleton>
+  </div>
+</ion-content>
