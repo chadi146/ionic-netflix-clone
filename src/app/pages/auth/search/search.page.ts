@@ -51,6 +51,7 @@ export class SearchPage extends TrackByHelper implements OnInit {
     if (this.searchInput) {
       this.searchInput.nativeElement.blur();
       this.searching = false;
+      /* Trigger the Native Keyboard events only on native devices */
       if (Capacitor.isNativePlatform()) {
         Keyboard.hide();
       }

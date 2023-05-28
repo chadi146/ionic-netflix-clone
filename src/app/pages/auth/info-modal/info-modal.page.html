@@ -1,7 +1,7 @@
 <ion-content>
   <ion-row class="ion-align-items-center">
     <ion-col size="10">
-      <h2><app-skeleton [data]="series?.title"></app-skeleton></h2>
+      <h2><app-skeleton [data]="series.title || ''"></app-skeleton></h2>
     </ion-col>
     <ion-col size="2" class="ion-text-right">
       <ion-button

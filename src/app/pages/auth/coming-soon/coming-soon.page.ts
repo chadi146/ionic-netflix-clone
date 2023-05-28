@@ -51,6 +51,17 @@ export class ComingSoonPage extends TrackByHelper implements OnInit, OnDestroy {
     }
   }
 
+  /**
+   * This function checks if a video element is in the viewport and starts autoplay if it is.
+   *
+   * @param {any} ev - The "ev" parameter is an event object that is passed to the "contentScrolled"
+   * function. It contains information about the event that triggered the function, such as the type of
+   * event and any additional data related to the event. However, it is not used in the function and can
+   * be omitted
+   *
+   * @returns If the currentPlaying video element is in the viewport, the function returns without doing
+   * anything.
+   */
   contentScrolled(ev: any) {
     if (this.currentPlaying && this.isElementInViewport(this.currentPlaying)) {
       return;
@@ -58,22 +69,22 @@ export class ComingSoonPage extends TrackByHelper implements OnInit, OnDestroy {
       this.currentPlaying &&
       !this.isElementInViewport(this.currentPlaying)
     ) {
-      // Item is out of view, pause it
+      /* Item is out of view, pause it */
       this.currentPlaying.pause();
       this.currentPlaying = null as unknown as HTMLVideoElement;
     }
 
     this.videoPlayers.forEach((player, index) => {
       if (this.currentPlaying) {
-        // Skip all further players, we are already playing
+        /* Skip all further players, we are already playing */
         return;
       }
 
-      // Check if the element is in our view
+      /* Check if the element is in our view */
       const nativeElement = player.nativeElement;
       const inView = this.isElementInViewport(nativeElement);
 
-      // Start autoplay if it's in the view
+      /* Start autoplay if it's in the view */
       if (inView) {
         this.activeBlock = index;
         this.currentPlaying = nativeElement;
@@ -84,7 +95,7 @@ export class ComingSoonPage extends TrackByHelper implements OnInit, OnDestroy {
     });
   }
 
-  // Check if the element is visible in the view
+  /* Check if the element is visible in the view */
   isElementInViewport(el: Element) {
     const rect = el.getBoundingClientRect();
     return (

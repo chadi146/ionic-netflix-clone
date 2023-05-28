@@ -42,7 +42,8 @@ export class DownloadsPage extends TrackByHelper implements OnInit, OnDestroy {
       });
   }
 
-  toggleEdit() {
+  /* When triggered shows the delete button related to each item or vice-versa */
+  toggleRemoveAll() {
     this.edit = !this.edit;
 
     this.items.forEach((item) => {
